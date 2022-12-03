@@ -1,0 +1,11 @@
+@import "./variables.scss";
+@import "./reset";
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: $text-primary;
+}

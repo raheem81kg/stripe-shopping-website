@@ -1,0 +1,12 @@
+rfce
+import React from 'react'
+
+function $1() {
+  return <div>$0</div>
+}
+
+export default $1
+
+TypeScript has own components and own snippets. Use search or just type ts before every component snippet.
+
+I.E. tsrcc

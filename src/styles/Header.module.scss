@@ -1,0 +1,58 @@
+@use "./variables.scss" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+    top: 12%;
+    left: 5%;
+    width: 90%;
+    // color: $text-primary;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo {
+        font-family: "Montserrat Medium", sans-serif;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-weight: $fw-semi-semi-bold;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    color: inherit;
+
+    button {
+        background: none;
+        border: none;
+        color: inherit;
+    }
+    svg {
+        color: inherit;
+        cursor: pointer;
+    }
+    &__shop {
+        font-size: $fs-nav;
+        font-weight: $fw-semi-bold;
+        font-family: "Montserrat SemiBold", sans-serif;
+    }
+    &__search {
+        width: 26px;
+        height: 26px;
+    }
+    &__cart {
+        width: 29px;
+        height: 29px;
+    }
+}

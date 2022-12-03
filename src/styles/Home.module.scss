@@ -1,0 +1,66 @@
+@import "variables.scss";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 160px 80px;
+    display: flex;
+    justify-content: center;
+
+    &__title {
+        text-transform: capitalize;
+        font-family: "Montserrat SemiBold", sans-serif;
+        font-size: 3rem;
+        font-weight: $fw-semi-bold;
+    }
+
+    &__text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-weight: $fw-regular;
+        margin: 18px 0;
+    }
+}
+
+.link {
+    &__btn {
+        text-transform: uppercase;
+        font-family: "Montserrat SemiBold", sans-serif;
+        font-size: $fs-300;
+        font-weight: $fw-semi-bold;
+
+        cursor: pointer;
+        background-color: #fff;
+        position: relative;
+        border: none;
+        color: $text-secondary;
+        padding: 16px 40px;
+        letter-spacing: 1px;
+
+        &::before {
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transform: translate(0px, 0px);
+            transition: transform 0.2s;
+            transition-property: transform;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+            width: 100%;
+        }
+
+        &:hover {
+            &::before {
+                transform: translate(3.1px, 3.1px);
+
+                color: white;
+            }
+        }
+    }
+}

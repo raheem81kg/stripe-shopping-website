@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/Header";
+import { HeroContent as Home } from "./pages/HeroContent";
+import Shop from "./pages/Shop";
+import styles from "./styles/App.module.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const location = useLocation();
+
+    return (
+        <div className={location.pathname === "/" ? styles.home : styles.shop}>
+            <Header />
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <Home
+                            title="Nvidia GeForce RTX 3090"
+                            text="Now available for preorder, shipping December, 2020."
+                            path="/catalog"
+                            buttonText="Shop Now"
+                        />
+                    }
+                />
+                <Route path="/catalog" element={<Shop />}>
+                    <Route path=":category" element={<Shop />} />
+                </Route>
+                <Route path="*" element={<div>404</div>} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

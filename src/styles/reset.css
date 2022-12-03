@@ -1,0 +1,113 @@
+body {
+    color: black;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* SCROLLBAR STYLE */
+/* body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+} */
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+html {
+    box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Percentage based heights */
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    /* line-height: 1.5; */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* Make images, videos and icons easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons & Remove the margin in Firefox and Safari*/
+/* input,
+button,
+textarea,
+optgroup,
+select {
+    font: inherit;
+    line-height: 1.15;
+} */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Small screens */
+/* @media only screen and (max-width: 600px) {
+} */
+
+/* Large Screens
+   ========================================================================== */
+/* @media only screen and (min-width: 600px) {
+  
+  } */

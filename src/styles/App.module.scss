@@ -1,0 +1,13 @@
+@use "variables.scss" as *;
+
+.home {
+    background: url(../assets/images/rtx-3090.jpg);
+    background-size: cover;
+    background-position: 50%;
+    min-height: 100vh;
+}
+
+.shop {
+    background-color: $bg-seconday;
+    min-height: 100vh;
+}
