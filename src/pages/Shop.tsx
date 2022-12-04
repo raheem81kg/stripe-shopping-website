@@ -1,12 +1,11 @@
 import styles from "../styles/Shop.module.scss";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, incrementQuantity, selectCartItems } from "../redux/slice/cartItemsSlice";
 import allProducts from "../data/allProducts";
 import categories from "../data/categories";
-// import chassis from "../data/chassis";
-// import memory from "../data/memory";
-// import processors from "../data/processors";
-// import videoCards from "../data/videoCards";
+import formatCurrency from "../utils/formatCurrency";
 
 interface Product {
     category: string;
@@ -25,20 +24,21 @@ interface Category {
 }
 
 function Shop() {
+    const cartItems = useSelector(selectCartItems);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const param = useParams().category;
-    const [productData, setProductData] = useState<Product[]>([
-        {
-            category: "",
-            categoryId: "",
-            id: "",
-            name: "",
-            price: 0,
-            image: "",
-            previewImage: "",
-            gallery: [""],
-        },
-    ]);
+    const [productData, setProductData] = useState<Product[]>([]);
+
+    const addOrUpdateCart = (product: Product) => {
+        const item = cartItems.find((item) => item.id === product.id);
+
+        if (!item) {
+            dispatch(addToCart({ ...product, quantity: 1 }));
+        } else {
+            dispatch(incrementQuantity({ id: item.id, amount: 1 }));
+        }
+    };
 
     // checking the url parameter to load the correct product data (all products or a certain category)
     useEffect(() => {
@@ -54,7 +54,7 @@ function Shop() {
                 navigate("/");
             }
         }
-    }, [param]);
+    }, [param, navigate]);
 
     return (
         <div className={styles.Shop_container}>
@@ -82,17 +82,19 @@ function Shop() {
                                     <div className={styles.product__link__images}>
                                         <img
                                             src={product.image}
-                                            alt={`${product.name} image`}
+                                            alt={`${product.name}`}
                                             className={styles.product__link__images__front}
                                         />
                                         <img
                                             src={product.previewImage}
-                                            alt={`${product.name} preview image`}
+                                            alt={`${product.name} preview`}
                                             className={styles.product__link__images__back}
                                         />
                                     </div>
                                     <p className={styles.product__name}>{product.name}</p>
-                                    <p className={styles.product__price}>{product.price}</p>
+                                    <p onClick={() => addOrUpdateCart(product)} className={styles.product__price}>
+                                        {formatCurrency(product.price)}
+                                    </p>
                                 </Link>
                             </li>
                         );

@@ -42,10 +42,12 @@
         color: inherit;
         cursor: pointer;
     }
-    &__shop {
+    &__shop,
+    &__sign_in {
         font-size: $fs-nav;
         font-weight: $fw-semi-bold;
         font-family: "Montserrat SemiBold", sans-serif;
+        cursor: pointer;
     }
     &__search {
         width: 26px;
