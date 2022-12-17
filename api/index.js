@@ -17,6 +17,10 @@ const createCheckoutSessionLimiter = rateLimit({
 
 const HOST = process.env.REACT_APP_HOST || 3000;
 
+app.get("/", () => {
+    res.send({ message: "Point hit successfully!" });
+});
+
 app.post("/api/checkout", createCheckoutSessionLimiter, async (req, res) => {
     console.log(req.body);
     const { items, email } = req.body;
@@ -55,4 +59,3 @@ const PORT = process.env.SERVER_PORT || 3001;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
 exports.handler = app;
-
