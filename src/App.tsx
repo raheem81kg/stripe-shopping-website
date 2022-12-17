@@ -24,7 +24,7 @@ function App() {
                         element={
                             <Home
                                 title="Nvidia GeForce RTX 3090"
-                                text="Now available for preorder, shipping December, 2020."
+                                text="Now available for preorder, shipping December, 2022."
                                 path="/catalog"
                                 buttonText="Shop Now"
                             />

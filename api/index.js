@@ -53,3 +53,6 @@ app.post("/api/checkout", createCheckoutSessionLimiter, async (req, res) => {
 
 const PORT = process.env.SERVER_PORT || 3001;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
+exports.handler = app;
+
