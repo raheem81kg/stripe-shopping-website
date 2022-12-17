@@ -17,10 +17,6 @@ const createCheckoutSessionLimiter = rateLimit({
 
 const HOST = process.env.REACT_APP_HOST || 3001;
 
-app.get("/", (req, res) => {
-    res.send({ message: "Point hit successfully!" });
-});
-
 app.post("/api/checkout", createCheckoutSessionLimiter, async (req, res) => {
     console.log(req.body);
     const { items, email } = req.body;
