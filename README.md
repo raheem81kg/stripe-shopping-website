@@ -1,14 +1,101 @@
-# React.js app with Express.js backend
+# Shopping Website
 
-This is a React.js app with Express.js backend created for Women Who Code Austin, TX frontend meetup to demonstrate running a full stack app on Vercel.
+This is a React.js app with Express.js backend.
 
-It is deployed here on Vercel: <a href="https://vercel-express-react-demo.vercel.app/">https://vercel-express-react-demo.vercel.app/</a>
+It is deployed here on Vercel: <a href="https://shopping-website-raheem81kg.vercel.app/">https://shopping-website-raheem81kg.vercel.app/</a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To start the Express.js backend, `cd` to the `api` directory of this app and run `node index.js` .
+To start the Express.js backend, `cd` to the `api` directory of this app and run `npm install` then `node index.js` .
 
-Then `cd` to the top directory of this app, and run `npm start`. This will start the React.js frontend.
+Then `cd` to the top directory of this app, and run `npm install` then `npm start`. This will start the React.js frontend.
+
+### Features
+
+-   Responsive mobile responsive
+-   Stripe checkout (dummy card info - 42424242...)
+-   Add and remove products from the shopping cart
+-   Clean user interface with smooth animations using Framer Motion
+-   Filter products by categories
+-   Google sign in
+
+<table>
+  <tr>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+        width="46"
+        height="46"
+        alt="JavaScript"
+      />
+      <br /><strong>JavaScript</strong>
+    </td>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+        width="46"
+        height="46"
+        alt="TypeScript"
+      />
+      <br /><strong>TypeScript</strong>
+    </td>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        width="46"
+        height="46"
+        alt="React"
+      />
+      <br /><strong>React</strong>
+    </td>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+        width="46"
+        height="46"
+        alt="Redux"
+      />
+      <br /><strong>Redux</strong>
+    </td>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        width="46"
+        height="46"
+        alt="Node.js"
+      />
+      <br /><strong>Node.js</strong>
+    </td>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+        width="46"
+        height="46"
+        alt="Express"
+      />
+      <br /><strong>Express</strong>
+    </td>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+        width="46"
+        height="46"
+        alt="Firebase"
+      />
+      <br /><strong>Firebase</strong>
+    </td>
+    <td align="center" height="106" width="106">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        width="46"
+        height="46"
+        alt="Git"
+      />
+      <br /><strong>Git</strong>
+    </td>
+    
+  </tr>
+</table>
 
 ## Available Scripts
 
@@ -22,33 +109,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+## Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Home Page
 
-### `npm run build`
+![image](https://user-images.githubusercontent.com/46077668/100103292-a6ea9000-2e9f-11eb-9429-e9a115957736.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Catalog Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/46077668/100103354-bc5fba00-2e9f-11eb-9514-a5dcd96580b3.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Product Page
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/46077668/100103390-cbdf0300-2e9f-11eb-8460-0b9feb8cf650.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Cart
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/46077668/100103473-e913d180-2e9f-11eb-8eba-53e4b42c8779.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Search
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![image](https://user-images.githubusercontent.com/46077668/100103945-8111bb00-2ea0-11eb-90e0-1830ec4cf005.png)
 
-## Learn More
+#### Checkout
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/104041730/208232916-8bc5341c-7342-4ef3-8498-447cd7b1a955.png)
