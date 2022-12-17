@@ -17,7 +17,7 @@ const createCheckoutSessionLimiter = rateLimit({
 
 const HOST = process.env.REACT_APP_HOST || 3001;
 
-app.get("/", () => {
+app.get("/", (res) => {
     res.send({ message: "Point hit successfully!" });
 });
 
