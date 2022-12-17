@@ -1,0 +1,23 @@
+@use "./variables.scss" as *;
+
+.success_container {
+    font-family: "Montserrat SemiBold";
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: calc(50vh - 100px);
+    text-align: center;
+    color: black;
+
+    h1,
+    p {
+        font-family: "Montserrat";
+    }
+    h1 {
+        font-size: 2em;
+        margin: 1em 0;
+    }
+
+    p {
+        margin: 0.5em 0;
+    }
+}

@@ -5,6 +5,7 @@ import type { RootState } from "../store";
 // Define a type for each item in the array
 interface Item {
     id: string;
+    stripe_id: string;
     name: string;
     category: string;
     price: number;

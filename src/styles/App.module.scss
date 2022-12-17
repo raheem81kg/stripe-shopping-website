@@ -11,3 +11,9 @@
     background-color: $bg-seconday;
     min-height: 100vh;
 }
+
+@media (max-width: 780px) {
+    .home {
+        background-position: 56.5%;
+    }
+}

@@ -12,18 +12,6 @@
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
     overflow: hidden;
-    &__text {
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        text-decoration: none;
-        color: #231f20;
-        font-family: "Montserrat SemiBold";
-        font-weight: 600;
-        font-size: 0.9rem;
-        position: relative;
-        transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
-    }
     :before {
         content: "";
         width: 100%;
@@ -43,5 +31,18 @@
         & .link__text {
             color: $text-primary;
         }
+    }
+
+    &__text {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-decoration: none;
+        color: #231f20;
+        font-family: "Montserrat SemiBold";
+        font-weight: 600;
+        font-size: calc(0.7rem + 0.2vw);
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
     }
 }

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styles from "../styles/CartItem.module.scss";
-import { incrementQuantity, updateQuantity, setCart } from "../redux/slice/cartItemsSlice";
+import { incrementQuantity, updateQuantity, setCart, removeFromCart } from "../redux/slice/cartItemsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCartItems } from "../redux/slice/cartItemsSlice";
 import formatCurrency from "../utils/formatCurrency";
@@ -18,17 +18,17 @@ const CartItem = ({ id, name, category, price, image, quantity }: Props) => {
     const dispatch = useDispatch();
     const cartItems = useSelector(selectCartItems);
 
-    // filters out products with no quantity whenever the cartItems state is changed;
-    useEffect(() => {
-        dispatch(setCart(cartItems.filter((item) => item.quantity > 0)));
-    }, cartItems);
-
     const quantityChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(updateQuantity({ id, amount: Number(e.target.value) }));
     };
 
     const decrementQuantity = () => {
-        dispatch(incrementQuantity({ id, amount: -1 }));
+        if (quantity <= 1) {
+            // remove products with no quantity
+            dispatch(removeFromCart(id));
+        } else {
+            dispatch(incrementQuantity({ id, amount: -1 }));
+        }
     };
 
     return (

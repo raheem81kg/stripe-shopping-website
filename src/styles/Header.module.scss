@@ -9,6 +9,7 @@
     top: 12%;
     left: 5%;
     width: 90%;
+    z-index: 1;
     // color: $text-primary;
 
     a {
@@ -44,7 +45,7 @@
     }
     &__shop,
     &__sign_in {
-        font-size: $fs-nav;
+        font-size: calc($fs-nav + 0.05vw - 2px);
         font-weight: $fw-semi-bold;
         font-family: "Montserrat SemiBold", sans-serif;
         cursor: pointer;
@@ -56,5 +57,44 @@
     &__cart {
         width: 29px;
         height: 29px;
+    }
+}
+
+.cartBtn_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cartLength {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    left: calc(-100% - 7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background: black;
+    font-size: 0.9rem;
+    font-family: "Montserrat Bold", sans-serif;
+    font-weight: 700;
+}
+
+.svgArrow {
+    position: absolute;
+    left: calc(100% - 2px);
+}
+
+@media (max-width: 780px) {
+    .header {
+        flex-direction: column;
+        height: 100px;
+        top: 5%;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-around;
     }
 }

@@ -1,0 +1,21 @@
+{
+    "name": "stripe-server",
+    "version": "1.0.0",
+    "description": "stripe server for shopping website",
+    "main": "server.js",
+    "scripts": {
+        "test": "npm run",
+        "start": "node index.js",
+        "devStart": "nodemon index.js"
+    },
+    "author": "Raheem Gordon",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-rate-limit": "^6.7.0",
+        "nodemon": "^2.0.20",
+        "stripe": "^11.1.0"
+    }
+}

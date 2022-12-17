@@ -11,6 +11,7 @@ interface Product {
     category: string;
     categoryId: string;
     id: string;
+    stripe_id: string;
     name: string;
     price: number;
     image: string;
@@ -30,15 +31,15 @@ function Shop() {
     const param = useParams().category;
     const [productData, setProductData] = useState<Product[]>([]);
 
-    const addOrUpdateCart = (product: Product) => {
-        const item = cartItems.find((item) => item.id === product.id);
+    // const addOrUpdateCart = (product: Product) => {
+    //     const item = cartItems.find((item) => item.id === product.id);
 
-        if (!item) {
-            dispatch(addToCart({ ...product, quantity: 1 }));
-        } else {
-            dispatch(incrementQuantity({ id: item.id, amount: 1 }));
-        }
-    };
+    //     if (!item) {
+    //         dispatch(addToCart({ ...product, quantity: 1 }));
+    //     } else {
+    //         dispatch(incrementQuantity({ id: item.id, amount: 1 }));
+    //     }
+    // };
 
     // checking the url parameter to load the correct product data (all products or a certain category)
     useEffect(() => {
@@ -92,9 +93,7 @@ function Shop() {
                                         />
                                     </div>
                                     <p className={styles.product__name}>{product.name}</p>
-                                    <p onClick={() => addOrUpdateCart(product)} className={styles.product__price}>
-                                        {formatCurrency(product.price)}
-                                    </p>
+                                    <p className={styles.product__price}>{formatCurrency(product.price)}</p>
                                 </Link>
                             </li>
                         );

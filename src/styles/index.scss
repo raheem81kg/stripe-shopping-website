@@ -9,3 +9,16 @@ body {
     font-family: "Montserrat", sans-serif;
     color: $text-primary;
 }
+
+/* SCROLLBAR STYLE */
+body::-webkit-scrollbar {
+    width: 0.33rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: $bg-product;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $text-secondary;
+}
