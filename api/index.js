@@ -1,7 +1,7 @@
 const express = require("express");
 var cors = require("cors");
 const rateLimit = require("express-rate-limit");
-require("dotenv").config();
+require("dotenv").config({ path: "../.env" });
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
@@ -55,7 +55,7 @@ app.post("/api/checkout", createCheckoutSessionLimiter, async (req, res) => {
     }
 });
 
-const PORT = process.env.SERVER_PORT || 3001;
+const PORT = process.env.SERVER_PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
-exports.handler = app;
+module.exports = app;
