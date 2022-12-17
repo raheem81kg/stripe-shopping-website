@@ -5,8 +5,8 @@
     "main": "server.js",
     "scripts": {
         "test": "npm run",
-        "start": "node index.js",
-        "devStart": "nodemon index.js"
+        "start": "node server.js",
+        "devStart": "nodemon server.js"
     },
     "author": "Raheem Gordon",
     "license": "ISC",
