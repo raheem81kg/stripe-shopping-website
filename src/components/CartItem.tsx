@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import styles from "../styles/CartItem.module.scss";
-import { incrementQuantity, updateQuantity, setCart, removeFromCart } from "../redux/slice/cartItemsSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { selectCartItems } from "../redux/slice/cartItemsSlice";
+import { incrementQuantity, updateQuantity, removeFromCart } from "../redux/slice/cartItemsSlice";
+import { useDispatch } from "react-redux";
 import formatCurrency from "../utils/formatCurrency";
 
 interface Props {
@@ -16,7 +14,6 @@ interface Props {
 
 const CartItem = ({ id, name, category, price, image, quantity }: Props) => {
     const dispatch = useDispatch();
-    const cartItems = useSelector(selectCartItems);
 
     const quantityChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(updateQuantity({ id, amount: Number(e.target.value) }));

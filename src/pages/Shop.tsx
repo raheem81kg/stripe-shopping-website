@@ -1,8 +1,6 @@
 import styles from "../styles/Shop.module.scss";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, incrementQuantity, selectCartItems } from "../redux/slice/cartItemsSlice";
 import allProducts from "../data/allProducts";
 import categories from "../data/categories";
 import formatCurrency from "../utils/formatCurrency";
@@ -25,10 +23,9 @@ interface Category {
 }
 
 function Shop() {
-    const cartItems = useSelector(selectCartItems);
-    const dispatch = useDispatch();
     const navigate = useNavigate();
-    const param = useParams().category;
+
+    const param = useParams().categoryid;
     const [productData, setProductData] = useState<Product[]>([]);
 
     // const addOrUpdateCart = (product: Product) => {
@@ -47,8 +44,9 @@ function Shop() {
             setProductData(allProducts);
         } else {
             const currentCategoryname = categories.find((category) => category.id === param);
+            console.log(currentCategoryname);
 
-            if (currentCategoryname) {
+            if (currentCategoryname != undefined) {
                 const currentCategoryList: Product[] = allProducts.filter((product) => product.categoryId === currentCategoryname?.id);
                 setProductData(currentCategoryList);
             } else {
@@ -62,7 +60,7 @@ function Shop() {
             <div className={styles.side}>
                 <div className={styles.side__current_category}>
                     <div className={styles.side__current_category__root}>Shop /</div>
-                    <div className={styles.side__current_category__sub}>{!param ? "All Products" : productData[0].category}</div>
+                    <div className={styles.side__current_category__sub}>{!param ? "All Products" : productData[0]?.category}</div>
                 </div>
                 <div className={styles.side__all_categories}>
                     <ul className={styles.category_links}>
