@@ -11,7 +11,7 @@ app.use(express.json());
 
 const createCheckoutSessionLimiter = rateLimit({
     windowMs: 60 * 1000, // 1 minute
-    max: 15, // Limit each IP to 15 requests per windowMs
+    max: 12, // Limit each IP to 12 requests per windowMs
     message: "Too many requests, please try again later",
 });
 
