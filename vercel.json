@@ -2,10 +2,6 @@
     "routes": [
         {
             "src": "/api/checkout",
-            "dest": "api/server.js"
-        },
-        {
-            "src": "/api/checkout",
             "methods": ["POST", "GET"],
             "dest": "api/server.js"
         }
