@@ -128,7 +128,7 @@
 .squares {
     display: grid;
     grid-template-columns: auto auto auto;
-    margin: 30vh 0 0;
+    margin: 29vh 0 0;
 }
 
 .square {
@@ -146,14 +146,14 @@
     font-family: "Montserrat Medium";
     font-weight: 500;
     letter-spacing: 2px;
-    margin: 10vh 0 0;
+    margin: 9.5vh 0 0;
 }
 
 .buyButtons {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 20vh 0 0;
+    margin: auto 0 0;
 }
 
 .addToBag {
