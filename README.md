@@ -12,7 +12,7 @@ Then `cd` to the top directory of this app, and run `npm install` then `npm star
 
 ### Features
 
--   Responsive mobile responsive
+-   Mobile responsive
 -   Stripe checkout (dummy card info - 42424242...)
 -   Add and remove products from the shopping cart
 -   Clean user interface with smooth animations using Framer Motion
